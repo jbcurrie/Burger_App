@@ -1,0 +1,27 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "full stack app displays burger choices",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbcurrie/Burger_App.git"
+  },
+  "author": "jbcurrie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbcurrie/Burger_App/issues"
+  },
+  "homepage": "https://github.com/jbcurrie/Burger_App#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.1",
+    "nodemon": "^1.11.0"
+  }
+}

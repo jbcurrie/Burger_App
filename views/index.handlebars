@@ -1,0 +1,93 @@
+{{!-- burger app let's user add a burger, displaying in left column, 
+then 'devour the burger', which adds it to a right column --}}
+
+{{!-- on button click the app submits an api post 
+    add a burger to the database; is this a post or update? --}}
+
+{{!-- runs a get api function to display the result back on the page in a new column --}}
+{{!-- 
+extra things 
+run a function to reset the database (delete method) --}}
+
+{{!-- title, section for added burgers, section for devoured burgers, 
+input for burger name, submit button --}}
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  {{!-- <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Logo
+  </div> --}}
+    <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">BURGER EATER</h1>
+        <hr class="w3-border-grey" style="margin:auto;width:40%">
+        <form class="w3-panel">
+            <label>Name</label>
+            <input class="w3-input" type="text" id="burgerName" name="burger">
+            <button type="submit" class="w3-button w3-red">Add Burger</button>
+        </form>
+        <div class="w3-row">
+            <div class="w3-half w3-container">
+                {{!-- add undevoured --}}
+                <ul class="w3-ul">
+                    <li><h2>Burgers Ready to Eat</h2></li>
+                    {{#each burgers}}
+                        {{#unless this.devoured}}
+                        <li>
+                            {{!-- <div class="w3-panel w3-card-2 w3-green"><p>w3-card-1</p> --}}
+                            {{this.name}}
+
+                            <form action="/{{this.id}}?_method=PUT" method="POST">
+                                <input type="hidden" name="devoured" value="true">
+                                <button class="w3-button" type="submit">Eat this Burger!</button>
+                            </form>
+                            <form class="w3-display-topright" action="/{{this.id}}?_method=DELETE" method="POST">
+                                <!-- option 2, pass in the id of the cat inside the form - you would access this in the route using req.body.id not req.params.id -->
+                                <!-- <input type="hidden" name="id" value="{{this.id}}"> -->
+                                {{!-- button > onclick="this.parentElement.style.display='none'" --}}
+                                <button class="w3-button w3-grey" type="submit">X</button>
+                            </form>
+                            {{!-- {{> burgers/delete-burgers}} --}}
+                        </li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="w3-half w3-container">
+                {{!-- add devoured --}}
+                <ul class="w3-ul">
+                    <li><h2>Burgers Eaten</h2></li>
+                    {{#each burgers}}
+                        {{#if this.devoured}}
+                        <li>
+                            {{!-- <div class="w3-panel w3-card-2 w3-green"><p>w3-card-1</p> --}}
+                            {{this.name}}
+                            <form class="w3-display-topright" action="/{{this.id}}?_method=DELETE" method="POST">
+                                <!-- option 2, pass in the id of the cat inside the form - you would access this in the route using req.body.id not req.params.id -->
+                                <!-- <input type="hidden" name="id" value="{{this.id}}"> -->
+                                {{!-- button > onclick="this.parentElement.style.display='none'" --}}
+                                <button class="w3-button w3-grey" type="submit">X</button>
+                            </form>
+                            {{!-- {{> burgers/delete-burgers}} --}}
+                        </li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        {{!-- <p class="w3-large w3-center">35 days left</p> --}}
+    </div>
+  {{!-- <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div> --}}
+</div>
+
+{{!-- on click, remove element and delete from database --}}
+{{!-- <div class="w3-panel w3-display-container">
+    {{!-- content here --}}
+    {{!-- span > onclick="this.parentElement.style.display='none'" --}}
+    <form action="/{{this.id}}?_method=DELETE" method="POST">
+    <!-- option 2, pass in the id of the cat inside the form - you would access this in the route using req.body.id not req.params.id -->
+    <!-- <input type="hidden" name="id" value="{{this.id}}"> -->
+    <span class="w3-button w3-display-topright">X</span>
+    <button type="submit">DELETE!</button>
+    </form>
+</div> --}} 
