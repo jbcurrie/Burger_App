@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var nodemon = require("nodemon");
 
-var PORT = 3000 || process.env.PORT;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
