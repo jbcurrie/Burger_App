@@ -6,7 +6,7 @@
             <div class="w3-col s12">    
                 <form class="w3-panel w3-center" action="/" method="POST">
                     <h3><label>What's the name of the burger?</label></h3>
-                        <input class="w3-input" type="text" id="burgerName" name="burger">
+                        <input class="w3-input" type="text" id="burgerName" name="burger" pattern="[a-zA-Z\s]{0,30}" title="Alphabet Characters Only" required>
                     <button type="submit" class="w3-button w3-red burgerBtn">Add Burger</button>
                 </form>
             </div>
