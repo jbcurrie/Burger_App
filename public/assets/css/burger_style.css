@@ -1,13 +1,46 @@
-body,h1 {font-family: "Raleway", sans-serif}
+body,h1,h2,div,form,input,label,h3,a {font-family: 'Dosis', sans-serif;}
 body, html {height: 100%}
-.bgimg {
+body {
     background-image: url('../img/burger_bck.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
+    background-repeat: repeat-y;
 }
+.bgimg, {
+    height:800px;
+    min-height: 100%;
+    /* opacity: 0.5; */
+}
+.w3-display-middle {
+    max-height:100%;
+}
+.w3-card-2 {
+    background-color: rgba(00,00,00,0.6);
+    margin:auto;
+    width:80%;
+}
+.burgerBtn {
+    margin-top: 15px;
+}
+#burgerName {
+    margin: auto;
+    width: 50%;
+}
+a {
+    color: #ffffff;
+}
+footer {
+    position: relative;
+    margin-top:40px;
+    left:0;
+    bottom:0;
+}
+
+
 /* 
 font-family: 'Fredoka One', cursive;
 font-family: 'Dosis', sans-serif;
 font-family: 'Concert One', cursive;
 font-family: 'Bungee Shade', cursive; */
+/* first **font-family: "Raleway", sans-serif */

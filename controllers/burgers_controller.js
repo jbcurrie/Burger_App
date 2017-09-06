@@ -21,24 +21,26 @@ router.get("/",function(req,res) {
         var hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        // console.log(hbsObject);
+        
         res.render("index",hbsObject)
     })
 });
 //post - post data from webpage to server
 router.post("/", function(req,res) {
+    // console.log(req.body.devoured);
     burger.create([
-        "name","sleepy"
-    ],[req.body.name, req.body.sleepy
+        "burger_name","devoured"
+    ],[req.body.burger, false
     ], function() {
         res.redirect("/");
     });
 });
 //put - change data based on user input
 router.put("/:id", function(req,res) {
-    var conditon = "id = " + req.params.id;
+    var condition = "id = " + req.params.id;
 
-    console.log("condition", condition);
+    // console.log("condition", condition);
 
     burger.update({
         devoured: req.body.devoured
@@ -48,7 +50,7 @@ router.put("/:id", function(req,res) {
 });
 //delete - remove data
 router.delete("/:id", function(req,res) {
-    var conditon = "id = " + req.params.id;
+    var condition = "id = " + req.params.id;
 
     burger.delete(condition, function () {
         res.redirect("/");
