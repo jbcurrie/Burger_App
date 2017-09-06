@@ -3,7 +3,7 @@
         <h1 class="w3-jumbo w3-animate-top w3-center">BURGER EATER</h1>
         <hr class="w3-border-grey" style="margin:auto;width:40%">
         <div class="w3-row">
-            <div class="w3-col s12">    
+            <div class="w3-col s12 w3-mobile">    
                 <form class="w3-panel w3-center" action="/" method="POST">
                     <h3><label>What's the name of the burger?</label></h3>
                         <input class="w3-input" type="text" id="burgerName" name="burger" placeholder="Ex. 'Double Cheeseburger'" pattern="[a-zA-Z\s]{0,30}" title="Alphabet Characters Only" required>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="w3-row">
-            <div class="w3-half w3-container">
+            <div class="w3-half w3-container w3-mobile">
                 
                 {{!-- <ul class="w3-ul"> --}}
                     {{!-- <li> --}}
@@ -40,7 +40,7 @@
                 {{/each}}
                 {{!-- </ul> --}}
             </div>
-            <div class="w3-half w3-container">
+            <div class="w3-half w3-container w3-mobile">
                 {{!-- add devoured --}}
                 {{!-- <ul class="w3-ul"> --}}
                     {{!-- <li> --}}
