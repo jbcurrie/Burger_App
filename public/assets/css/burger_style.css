@@ -26,6 +26,7 @@ body {
 #burgerName {
     margin: auto;
     width: 50%;
+    text-align: center;
 }
 a {
     color: #ffffff;
