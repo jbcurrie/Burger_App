@@ -21,8 +21,8 @@ body:before {
     background-position: center;
     background-size: cover;
     /* background-repeat: repeat-y; */
-    background-attachment: fixed;
-} */
+    /* background-attachment: fixed; */
+/* } */
 .bgimg, {
     height:800px;
     min-height: 100%;
