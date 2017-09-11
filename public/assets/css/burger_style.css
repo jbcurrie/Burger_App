@@ -5,7 +5,8 @@ body {
     min-height: 100%;
     background-position: center;
     background-size: cover;
-    background-repeat: repeat-y;
+    /* background-repeat: repeat-y; */
+    background-attachment: fixed;
 }
 .bgimg, {
     height:800px;
@@ -41,7 +42,9 @@ hr {
     margin:auto;
     width:40%;
 }
-
+.w3-jumbo {
+    padding: 0px 5px;
+}
 
 /* 
 font-family: 'Fredoka One', cursive;

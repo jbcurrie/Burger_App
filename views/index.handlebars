@@ -15,7 +15,7 @@
             <h2 class="w3-center">Burgers Ready to Eat</h2>
             {{#each burgers}}
                 {{#unless this.devoured}}
-                    <div class="w3-card-2 w3-display-container">
+                    <div class="w3-card-2 w3-display-container w3-padding w3-section">
                         <h3 class="w3-center">{{this.burger_name}}</h3>
                         <form action="/{{this.id}}?_method=PUT" method="POST">
                             <input type="hidden" name="devoured" value="true">
@@ -32,7 +32,7 @@
             <h2 class="w3-center">Burgers Eaten</h2>
             {{#each burgers}}
                 {{#if this.devoured}}
-                    <div class="w3-card-2 w3-display-container">
+                    <div class="w3-card-2 w3-display-container w3-padding w3-section">
                         <h3 class="w3-center">{{this.burger_name}}</h3>
                         <form class="w3-display-topright" action="/{{this.id}}?_method=DELETE" method="POST">
                             <button class="w3-button close" type="submit">X</button>
